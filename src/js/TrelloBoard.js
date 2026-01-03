@@ -46,7 +46,7 @@ class TrelloBoard {
       const fragment = document.createDocumentFragment();
       
       this.state[columnId].forEach((cardText, index) => {
-        fragment.appendChild(this.#createCardElement(columnId, cardText, index));
+        fragment.append(this.#createCardElement(columnId, cardText, index));
       });
       
       cardsContainer.replaceChildren(fragment);
@@ -64,7 +64,7 @@ class TrelloBoard {
     const content = document.createElement('span');
     content.className = 'card-content';
     content.textContent = text;
-    card.appendChild(content);
+    card.append(content);
     
     const actions = document.createElement('div');
     actions.className = 'card-actions';
@@ -87,9 +87,9 @@ class TrelloBoard {
       this.#deleteCard(columnId, index);
     });
     
-    actions.appendChild(editButton);
-    actions.appendChild(deleteButton);
-    card.appendChild(actions);
+    actions.append(editButton);
+    actions.append(deleteButton);
+    card.append(actions);
     
     card.addEventListener('dragstart', this.#handleDragStart.bind(this));
     card.addEventListener('dragend', this.#handleDragEnd.bind(this));
