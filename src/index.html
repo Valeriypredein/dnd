@@ -4,24 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trello-like Board</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="board">
       <div class="column" id="column1">
-        <div class="column-header">To Do</div>
+        <h2>To Do</h2>
         <div class="cards"></div>
-        <div class="add-card">Add another card</div>
+        <div class="add-card-container">
+          <textarea class="add-card-textarea" placeholder="Enter a title for this card..." aria-label="Enter card text"></textarea>
+          <div>
+            <button class="add-card" type="button">+ Add another card</button>
+            <span class="cancel-add-card" title="Cancel" aria-label="Cancel adding card">✖</span>
+          </div>
+        </div>
       </div>
+      
       <div class="column" id="column2">
-        <div class="column-header">In Progress</div>
+        <h2>In Progress</h2>
         <div class="cards"></div>
-        <div class="add-card">Add another card</div>
+        <div class="add-card-container">
+          <textarea class="add-card-textarea" placeholder="Enter a title for this card..." aria-label="Enter card text"></textarea>
+          <div>
+            <button class="add-card" type="button">+ Add another card</button>
+            <span class="cancel-add-card" title="Cancel" aria-label="Cancel adding card">✖</span>
+          </div>
+        </div>
       </div>
+      
       <div class="column" id="column3">
-        <div class="column-header">Done</div>
+        <h2>Done</h2>
         <div class="cards"></div>
-        <div class="add-card">Add another card</div>
+        <div class="add-card-container">
+          <textarea class="add-card-textarea" placeholder="Enter a title for this card..." aria-label="Enter card text"></textarea>
+          <div>
+            <button class="add-card" type="button">+ Add another card</button>
+            <span class="cancel-add-card" title="Cancel" aria-label="Cancel adding card">✖</span>
+          </div>
+        </div>
       </div>
     </div>
+    
+    <script type="module" src="./js/TrelloBoard.js"></script>
   </body>
 </html>
